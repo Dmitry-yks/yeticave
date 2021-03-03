@@ -1,4 +1,4 @@
-<
+
 <main class="container">
     <section class="promo">
         <h2 class="promo__title">Нужен стафф для катки?</h2>
@@ -32,7 +32,7 @@
                             <span class="lot__cost"><?=format_sum($lots['prise']); ?></span>
                         </div>
                         <div class="lot__timer timer">
-                            12:23
+                            <?=time_lots();?>
                         </div>
                     </div>
                 </div>
