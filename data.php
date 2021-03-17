@@ -3,7 +3,7 @@
 
 $is_auth = rand(0, 1);
 $user_name = 'Dimas'; // укажите здесь ваше имя
-$categories = [
+/*$categories = [
     'board' => "Доски и лыжи",
     'kreps' => "Крепления",
     'boots' => "Ботинки",
@@ -49,18 +49,24 @@ $info = [
         "gif"=>"img/lot-6.jpg "
     ]
 ];
+*/
 
-
-$con = mysqli_connect('127.0.0.1', 'root', '', 'schema');
-$sql = 'SELECT * FROM categories';
-$result = mysqli_query($con, $sql);
-if($result){
+$con = mysqli_connect('127.0.0.1', 'root', '', 'schema2');
+$sql = 'SELECT * FROM lots';
+$info = mysqli_query($con, $sql);
+if($info){
     echo mysqli_error($con);
 }
 
-$categories_list = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$info = mysqli_fetch_all($info, MYSQLI_ASSOC);
 
+$sql2 = 'SELECT * FROM categories';
+$categories = mysqli_query($con, $sql2);
+if($categories){
+    echo mysqli_error($con);
+}
 
+$categories = mysqli_fetch_all($categories, MYSQLI_ASSOC);
 
 
 
