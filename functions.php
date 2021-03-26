@@ -31,9 +31,6 @@ $lot_time_now = sprintf('%02d:%02d', $time_hours, $time_minutes );
 return $lot_time_now;
 }
 
-
-
-
 function compile_template($name, $data) {
     $name = 'templates/' . $name;
     $result = '';
@@ -47,7 +44,4 @@ function compile_template($name, $data) {
     return $result;
 }
 
-
-
 ?>
-

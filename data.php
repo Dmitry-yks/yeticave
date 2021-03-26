@@ -71,4 +71,3 @@ $categories = mysqli_fetch_all($categories, MYSQLI_ASSOC);
 
 
 ?>
-
